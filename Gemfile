@@ -54,7 +54,7 @@ end
 
 #Este codigo fue digitado para migrar hacia produccion en Heroku
 group :production do
-  gem 'pg', '0.17.1'
+  gem 'pg', '9.2.23'
 
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
