@@ -54,7 +54,7 @@ end
 
 #Este codigo fue digitado para migrar hacia produccion en Heroku
 group :production do
-  gem 'psql', '9.2.23'
+  gem 'pg', '1.0.0'
 
 
 end
