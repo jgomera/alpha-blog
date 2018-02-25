@@ -54,7 +54,7 @@ end
 
 #Este codigo fue digitado para migrar hacia produccion en Heroku
 group :production do
-  gem 'pg', '~> 1.0.0'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor'
 end
 
