@@ -1,0 +1,33 @@
+<h1>Edit existing article<h1>
+
+<!--Este codigo lo copie desde new.html.erb y me permite editar el articulo-->
+  <!--esto es para que genere un error, si dejamos el titulo y la descripcion en blanco -->
+  <% if @article.errors.any? %>
+  <h2>The following errors prevented the article from getting created</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <!-- Proceso para crear un formulario-->
+  <!-- Mas informacion en: http://guides.rubyonrails.org/form_helpers.html -->
+  <%= form_for @article do |f| %>
+    <p>
+      <%= f.label :title %> <br/>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :description %> <br/>
+      <%= f.text_area :description %>
+    </p>
+    <!-- Proceso para crear un submit buttom-->
+    <p>
+      <%= f.submit %>
+    </p>
+
+  <% end %>
+
+  <!--Crear link en la pagina de articulos Jgomera -->
+  <%= link_to "Back to articles listing", articles_path %>

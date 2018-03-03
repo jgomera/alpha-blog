@@ -1,0 +1,27 @@
+<!--Muestra el mensaje de todos los articulos jgomera-->
+<h1>Listing all articles </h1>
+
+<!-- Crear un link hacia cada articulo creado, que permita editar, borrar, etc.. Jgomera-->
+<p>
+  <%= link_to "Create new article", new_article_path %>
+</P>
+<!-- Crear una tabla Jgomera-->
+<table>
+  <!--TR = table Row Jgomera-->
+  <tr>
+    <!-- th = table header Jgomera-->
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <!--This allow me to display each one of all articles. Jgomera -->
+  <% @articles.each do |article| %>
+  <tr>
+    <!-- td = table data Jgomera-->
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Show', article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
