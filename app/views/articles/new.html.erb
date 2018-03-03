@@ -1,4 +1,13 @@
 <h1>Create an article</h1>
+<!--esto es para que genere un error, si dejamos el titulo y la descripcion en blanco -->
+<% if @article.errors.any? %>
+<h2>The following errors prevented the article from getting created</h2>
+<ul>
+  <% @article.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
 
 <!-- Proceso para crear un formulario-->
 <!-- Mas informacion en: http://guides.rubyonrails.org/form_helpers.html -->

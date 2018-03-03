@@ -2,13 +2,20 @@
 <html>
   <head>
     <title>AlphaBlog</title>
-    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <!-- Para desplegar el mensaje creado en el flash en articles_controller -->
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%= msg  %></li>
+     </ul>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
