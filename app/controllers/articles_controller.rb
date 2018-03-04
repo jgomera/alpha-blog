@@ -45,6 +45,14 @@ end
     @article = Article.find(params[:id])
   end
 
+  #Para Borrar el articulo que he creado
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Article was successfully deleted"
+    redirect_to articles_path
+  end
+
   #Definiendo el parametro de forma private y requiriendo el articulo
   private
     def article_params

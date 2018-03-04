@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   #root 'pages#home'
   get 'pages/home', to: 'pages#home'
-  #get 'pages/about', to: 'pages#about'
+  #get 'about', to: 'root_path'
   get 'pages/about', to:'pages#about'
   #Nuevo link para crear articulos
   resources :articles
+
 
 end

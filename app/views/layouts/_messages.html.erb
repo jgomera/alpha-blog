@@ -1,0 +1,6 @@
+<!-- Para desplegar el mensaje creado en el flash en articles_controller -->
+<% flash.each do |name, msg| %>
+  <ul>
+    <li><%= msg  %></li>
+  </ul>
+<% end %>
