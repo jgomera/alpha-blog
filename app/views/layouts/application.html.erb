@@ -10,8 +10,11 @@
 
   <body>
     <!-- Para hacer referencia (render)al codigo en layouts messages PARTIAL. jgomera -->
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
-
-    <%= yield %>
+    <!-- para central el letrero del Sign Up -->
+    <div class="container">
+      <%= yield %>
+    </div>  
   </body>
 </html>
