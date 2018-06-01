@@ -48,8 +48,17 @@ $navbar-default-bg: #063852;
 .description {
   margin-top: 0;
   }
+//Esto es para dar estilo a Listin all articles
+  .article-title {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
 
-  
+  .article-body {
+    border-top: 1px solid #FF420E;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 footer {
   margin-top: 45px;
   padding-top: 5px;
